@@ -44,3 +44,36 @@ Live Deployment
 
 Your project is hosted on:
 Render : https://kanth-assignment3-project-4.onrender.com
+
+Assignment Tracker – Project Plan
+
+1. Project Overview
+The Assignment Tracker is a web-based productivity tool that allows students to manage, organize, and keep track of their academic assignments. The system enables users to create, edit, delete, and view assignments in a clean and intuitive interface. The goal is to improve time management and ensure no assignment deadlines are missed.
+
+2. Core Features
+• Add new assignments with title, course, due date, and description.
+• Edit assignment details at any time.
+• Delete assignments that are completed or no longer relevant.
+• View all assignments in an organized table.
+• Responsive black & white modern UI.
+• MongoDB Atlas database integration for persistent storage.
+
+3. System Architecture
+The system is developed using the MVC architecture pattern:
+• Model – Represents the Assignment schema stored in MongoDB.
+• View – EJS pages for frontend display.
+• Controller – Handles CRUD logic for assignment operations.
+• Router – Manages navigation between pages.
+
+5. Visual Representation
+Below is a simple visualization of how the Assignment Tracker workflow functions.
+Home Page → Assignment List → Add/Edit/Delete Assignment → MongoDB Atlas
+
+6. Goals and Benefits
+• Helps students stay organized.
+• Ensures deadlines are not missed.
+• Provides a clean and simple dashboard.
+• Improves productivity and time management.
+
+
+
