@@ -1,0 +1,38 @@
+<!-- Include the header partial (common site header) -->
+<%- include('../partials/header'); %>
+
+<!-- Page title -->
+<h1>Edit Assignment</h1>
+
+<!-- Form to edit an existing assignment -->
+<!-- The action URL includes the assignment's ID so the server knows which assignment to update -->
+<form method="POST" action="/assignments/edit/<%= assignment._id %>">
+  
+  <!-- Input for assignment title, pre-filled with current title -->
+  <input name="title" 
+         class="form-control" 
+         value="<%= assignment.title %>" required><br>
+
+  <!-- Input for course name, pre-filled with current course -->
+  <input name="course" 
+         class="form-control" 
+         value="<%= assignment.course %>" required><br>
+
+  <!-- Input for due date, pre-filled with current due date -->
+  <!-- toISOString().substring(0,10) formats the date as YYYY-MM-DD for the input field -->
+  <input type="date"
+         name="dueDate"
+         class="form-control"
+         value="<%= assignment.dueDate.toISOString().substring(0, 10) %>"
+         required><br>
+
+  <!-- Textarea for assignment description, pre-filled with current description -->
+  <textarea name="description" 
+            class="form-control"><%= assignment.description %></textarea><br>
+
+  <!-- Submit button to update the assignment -->
+  <button class="btn btn-success">Update</button>
+</form>
+
+<!-- Include the footer partial (common site footer) -->
+<%- include('../partials/footer'); %>

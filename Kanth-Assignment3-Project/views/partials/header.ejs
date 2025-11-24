@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Page title dynamically set via EJS -->
   <title><%= title %></title>
 
-  <!-- Bootstrap -->
+  <!-- Include Bootstrap CSS from CDN for styling -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet">
 
-  <!-- Your CSS in public/Contacts -->
+  <!-- Link to custom CSS in the public/Contacts directory -->
   <link rel="stylesheet" href="/Contacts/app.css">
 </head>
 
+<!-- Body with Bootstrap container and top margin -->
 <body class="container mt-4">
 
+<!-- Navigation bar using Bootstrap classes -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <!-- Brand/logo on the left side -->
   <a class="navbar-brand ms-3" href="/">Assignment Tracker</a>
 
+  <!-- Navigation links -->
   <div class="navbar-nav ms-3">
+    <!-- Link to home page -->
     <a class="nav-link text-light" href="/">Home</a>
+    <!-- Link to assignments page -->
     <a class="nav-link text-light" href="/assignments">Assignments</a>
   </div>
 </nav>

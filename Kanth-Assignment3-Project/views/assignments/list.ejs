@@ -1,0 +1,48 @@
+<!-- Include the header partial (common site header) -->
+<%- include('../partials/header'); %>
+
+<!-- Page title -->
+<h1>Assignments</h1>
+
+<!-- Button to add a new assignment -->
+<a href="/assignments/add" class="btn btn-success mb-3">Add Assignment</a>
+
+<!-- Table to display all assignments -->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>       <!-- Assignment title column -->
+      <th>Course</th>      <!-- Course name column -->
+      <th>Due Date</th>    <!-- Assignment due date column -->
+      <th>Description</th> <!-- Assignment description column -->
+      <th>Actions</th>     <!-- Edit/Delete action buttons column -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- Loop through all assignments and create a row for each -->
+    <% assignments.forEach(a => { %>
+      <tr>
+        <td><%= a.title %></td>                        <!-- Display title -->
+        <td><%= a.course %></td>                       <!-- Display course -->
+        <td><%= a.dueDate.toDateString() %></td>      <!-- Display formatted due date -->
+        <td><%= a.description %></td>                  <!-- Display description -->
+
+        <td>
+          <!-- Edit button linking to edit page for this assignment -->
+          <a href="/assignments/edit/<%= a._id %>" class="btn btn-warning btn-sm">Edit</a>
+
+          <!-- Delete button linking to delete route with confirmation prompt -->
+          <a href="/assignments/delete/<%= a._id %>" 
+             onclick="return confirm('Delete this assignment?');" 
+             class="btn btn-danger btn-sm">
+            Delete
+          </a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<!-- Include the footer partial (common site footer) -->
+<%- include('../partials/footer'); %>

@@ -1,0 +1,26 @@
+<!-- Include the header partial (common header for the site) -->
+<%- include('../partials/header'); %>
+
+<!-- Page title -->
+<h1>Add Assignment</h1>
+
+<!-- Form to add a new assignment -->
+<form method="POST" action="/assignments/add">
+  <!-- Input for assignment title -->
+  <input name="title" class="form-control" placeholder="Title" required><br>
+  
+  <!-- Input for course name -->
+  <input name="course" class="form-control" placeholder="Course" required><br>
+  
+  <!-- Input for due date -->
+  <input type="date" name="dueDate" class="form-control" required><br>
+  
+  <!-- Textarea for assignment description -->
+  <textarea name="description" class="form-control" placeholder="Description"></textarea><br>
+
+  <!-- Submit button to save the assignment -->
+  <button class="btn btn-primary">Save</button>
+</form>
+
+<!-- Include the footer partial (common footer for the site) -->
+<%- include('../partials/footer'); %>
